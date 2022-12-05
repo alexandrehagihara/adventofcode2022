@@ -30,8 +30,8 @@ for line in f.readlines():
         to_move = stacks[i_from][-moves:]
         # Deixando o restante
         new_from = stacks[i_from][:-moves]
-        # Adicionando no destino de forma reversa
-        new_to = stacks[i_to] + to_move[::-1]
+        # Adicionando no destino sem inverter a ordem
+        new_to = stacks[i_to] + to_move
         # Atualizando pilhas
         stacks[i_from] = new_from
         stacks[i_to] = new_to
