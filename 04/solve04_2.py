@@ -1,4 +1,5 @@
-f = open("input04.txt", "r")
+import os
+f = open(f"{os.path.dirname(__file__)}/input04.txt", "r")
 
 count_overlap = 0
 # Lendo cada par

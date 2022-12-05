@@ -1,6 +1,7 @@
 # Aqui a idéia é pegar a lista de cada Elfo, somar as calorias e armazenar a maior soma de todos
 
-f = open("input1.txt", "r")
+import os
+f = open(f"{os.path.dirname(__file__)}/input01.txt", "r")
 
 total = 0
 greatest = 0

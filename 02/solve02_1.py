@@ -1,3 +1,6 @@
+import os
+f = open(f"{os.path.dirname(__file__)}/input02.txt", "r")
+
 # Dicionário de pontuações de acordo com o que entendemos das regras
 scores = {}
 # A/X (1pt): Rock
@@ -13,8 +16,6 @@ scores["B Z"] = 3+6 # Paper vs Scissors: Win
 scores["C X"] = 1+6 # Scissors vs Rock: Win
 scores["C Y"] = 2+0 # Scissors vs Paper: Lose
 scores["C Z"] = 3+3 # Scissors vs Scissors: Draw
-
-f = open("input02.txt", "r")
 
 total_score = 0
 for line in f.readlines():

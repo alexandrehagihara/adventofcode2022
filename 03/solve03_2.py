@@ -1,4 +1,5 @@
-f = open("input03.txt", "r")
+import os
+f = open(f"{os.path.dirname(__file__)}/input03.txt", "r")
 
 # Lista de caracteres em posição de prioridade
 priorities = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
