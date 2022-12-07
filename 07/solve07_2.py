@@ -73,4 +73,5 @@ for i in dir_list:
         if dir_list[i][1] < best_free_size:
             best_candidate = i
 
-print(best_candidate, dir_list[best_candidate])
+# print(best_candidate, dir_list[best_candidate])
+print(dir_list[best_candidate][1])
