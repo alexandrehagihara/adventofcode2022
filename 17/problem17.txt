@@ -1,7 +1,7 @@
-Advent of Code[About][Events][Shop][Settings][Log Out]Alexandre Hagihara 31*
-      /*2022*/[Calendar][AoC++][Sponsors][Leaderboard][Stats]
+Advent of Code[About][Events][Shop][Settings][Log Out]Alexandre Hagihara 33*
+   <y>2022</y>[Calendar][AoC++][Sponsors][Leaderboard][Stats]
 Our sponsors help make Advent of Code possible:
-Exoscale - Where to host your next application? Discover our simple and secure European cloud platform and get started in seconds. Happy coding!
+King - At King, we create unforgettable games (like Candy Crush) that are loved around the world. Join us to bring moments of magic to hundreds of millions of people every single day!
 --- Day 17: Pyroclastic Flow ---
 Your handheld device has located an alternative exit from the cave for you and the elephants. The ground is rumbling almost continuously now, but the strange valves bought you some time. It's definitely getting warmer in here, though.
 
@@ -337,8 +337,6 @@ How many units tall will the tower of rocks be after 2022 rocks have stopped fal
 
 Your puzzle answer was 3235.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 The elephants are not impressed by your simulation. They demand to know how tall the tower will be after 1000000000000 rocks have stopped! Only then will they feel confident enough to proceed through the cave.
 
@@ -346,9 +344,12 @@ In the example above, the tower would be 1514285714288 units tall!
 
 How tall will the tower be after 1000000000000 rocks have stopped?
 
-Answer: 
- 
+Your puzzle answer was 1591860465110.
 
-Although it hasn't changed, you can still get your puzzle input.
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.
