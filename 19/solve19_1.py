@@ -30,8 +30,8 @@ blueprints = [
 # Retorno: quantidade de geodes máximos que se conseguiu extrair em 24 minutos
 # Esta função é recursiva e leva em conta aquilo que se pode fazer com o estado atual
 def calculate_geodes(blueprint, state):
-    minutes = state[0]
-    if( minutes >= 15 ):
+    # Acabou o tempo
+    if( state[0] >= 24 ):
         return state[4]
     # Primeiro vamos gerar mais 1 recurso a depender da quantidade de robôs de cada tipo que temos
     copy_state = state[:]
@@ -48,6 +48,13 @@ def calculate_geodes(blueprint, state):
 
     result_geodes = []
 
+    # Estratégia:
+    # Ficar de olho na quantidade de clays. Se estamos longe de poder criar um obsidian robot, vai acumulando ores e gerando mais clay robots
+    # Ficar de olho na quantidade de obsidians. Se estamos longe de poder criar um geode robot, vai acumulando ores e gerando mais clay robots
+    # Então, a gente precisa gerar uma previsão baseada na quantidade atual de cada recurso e de cada robô.
+    # Talvez seja vantajoso ao invés de gerar um clay robot, gerar mais um ore robot. Isso pode demandar abrir ramificações para ver o que vale mais a pena.
+    # Acho que no blueprint 2 isso ocorre, já que o custo de um novo ore robot é menor do que um clay robot.
+    
     # Quinta opção gera mais um robô tipo geode, se isso for possível
     if( copy_state[1] >= blueprint[5] and copy_state[3] >= blueprint[6] ):
         cstate = copy_state[:]
