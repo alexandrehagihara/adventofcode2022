@@ -15,7 +15,8 @@ for line in f.readlines():
 def replace_expression(monkey_name):
     monkey = monkeys[monkey_name]
     if( monkey_name == 'root'):
-        return f"({replace_expression(monkey[0])}) = ({replace_expression(monkey[2])})"
+        return f"({replace_expression(monkey[0])}) - ({replace_expression(monkey[2])})"
+        # Modificando a expressão "a = b" para "a - b", que deve ser avaliado como "a - b = 0" pelo sympy
     elif( monkey_name == 'humn'):
         return 'x'
     else:
@@ -31,3 +32,7 @@ print(expression)
 # Peguei o resultado da expressão e coloquei para resolver no site https://www.mathpapa.com/algebra-calculator.html
 # Este site retornou x = 4795129184698945 / 1296, que pela calculadora dá 3.699.945.358.564,0007716049382716049
 # Eu coloquei então o valor 3699945358564, assumindo que houve algum erro de arredondamento no site, e deu certo!
+
+import sympy
+x = sympy.Symbol("x")
+print(sympy.solve(eval(expression),x)) # OK, deu algo parecido
